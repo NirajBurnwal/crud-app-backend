@@ -11,6 +11,10 @@ app.use(cors())
 app.use(express.json())
 app.use(router)
 
+app.get('/', (req, res)=>{
+    res.json("server started")
+})
+
 const port = process.env.PORT || 5001
 
 app.listen(port, ()=> {
